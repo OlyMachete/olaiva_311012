@@ -3,3 +3,7 @@ require 'sinatra'
 get '/hi' do
   erb :form
 end
+
+post '/hi' do
+	params[:form]
+end

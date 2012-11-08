@@ -1,0 +1,18 @@
+li.post id=post.id
+	= post.title
+	<p>
+    post= post.post
+    </p>
+    <p>
+    post= post.inserted_at
+    </p>
+    
+
+	form.submit action="/post/#{post.id}" method="POST"
+		input type="hidden" name="_method" value="read more"
+		input type="submit" value="read more" title="read more..."
+ 
+	form.delete action="/post/#{post.id}" method="POST"
+		input type="hidden" name="_method" value="DELETE"
+		input type="submit" value="&times;" title="Delete Post"
+		

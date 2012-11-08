@@ -1,0 +1,6 @@
+h2 My Posts
+ul.posts
+  - @posts.each do |post|
+    == slim :post, locals: {post: post}
+    
+<input type="button" name="b1" value="Insert new post" onclick="location.href='/newpost'">

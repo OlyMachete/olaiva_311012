@@ -17,10 +17,11 @@ end
 DataMapper.finalize
 
 =begin
-home page  con slim
+home page  con slim e visualizzazione ultimi 5 post in ordine di data descrescente
 =end
 get '/' do
-	@posts = Post.all
+#	@posts = Post.all
+	@posts = Post.all(:order => [ :inserted_at.desc ], :limit => 5)
 	slim :index2
 end
 
@@ -45,7 +46,8 @@ end
 visualizzazione dettaglio post  
 =end
 
-post '/post/:id' do
+get '/post/:id' do
+  Post.id 
 end
 
 =begin

@@ -7,10 +7,7 @@ li.post id=post.id
     post= post.inserted_at
     </p>
     
-
-	form.submit action="/post/#{post.id}" method="POST"
-		input type="hidden" name="_method" value="read more"
-		input type="submit" value="read more" title="read more..."
+<input type="button" name="b1" value="read more" onclick="location.href='/post/#{post.id}'">
  
 	form.delete action="/post/#{post.id}" method="POST"
 		input type="hidden" name="_method" value="DELETE"

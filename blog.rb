@@ -47,7 +47,8 @@ visualizzazione dettaglio post
 =end
 
 get '/post/:id' do
-  Post.id 
+ @detail = Post.get(params[:id])
+ slim :detail 
 end
 
 =begin

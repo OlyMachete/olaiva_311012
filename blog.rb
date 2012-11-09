@@ -59,3 +59,12 @@ delete '/post/:id' do
   Post.get(params[:id]).destroy
   redirect to('/')
 end
+
+=begin
+page not found  
+=end
+
+not_found do
+  halt 404, 'page not found'
+end
+

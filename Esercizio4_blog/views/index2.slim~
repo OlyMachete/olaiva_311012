@@ -1,5 +1,0 @@
-h2 My Posts
-ul.posts
-  - @posts.each do |post|
-    li.post= post.title
-    li.post= post.post

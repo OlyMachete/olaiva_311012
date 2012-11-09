@@ -1,9 +1,0 @@
-require 'sinatra'
-
-get '/hi' do
-  erb :hello
-end
-
-post '/hello' do
-     puts '#{params[:message]}'
-end

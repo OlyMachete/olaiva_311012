@@ -67,9 +67,16 @@ end
 delete di un post  
 =end
 
+get '/post/:id/delete' do
+  @post = Post.get(params[:id])
+  slim :delete
+end
+
+  
+  
 delete '/post/:id' do
-  @destroy = Post.get(params[:id]).destroy
-  if @destroy
+  p = Post.get(params[:id]).destroy
+  if p.destroy
   redirect to('/')
   else
     @error = "Errore deleting the post ##{params[:id]}"

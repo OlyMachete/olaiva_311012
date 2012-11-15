@@ -9,7 +9,4 @@ li.post id=post.id
     
 <input type="button" name="b1" value="read more" onclick="location.href='/post/#{post.id}'">
  
-	form.delete action="/post/#{post.id}" method="POST"
-		input type="hidden" name="_method" value="DELETE"
-		input type="submit" value="&times;" title="Delete Post"
-		
+<a href="/post/#{post.id}/delete">Delete</a>

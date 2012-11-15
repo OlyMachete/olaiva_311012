@@ -1,0 +1,10 @@
+h2 delete
+
+= @post.title
+
+
+<p>Are you sure you want to delete the following note: <em>"#post.id"</em>?</p>  
+  <form action="/post/:id" method="post">  
+    <input type="hidden" name="_method" value="delete">  
+    <input type="submit" value="Yes, Delete It!">  
+    <a href="/post/:id">Cancel</a>  
